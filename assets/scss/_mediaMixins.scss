@@ -1,0 +1,47 @@
+$xs: 576px;
+$sm: 767px;
+$md: 991px;
+$mdmin: 992px;
+$lg: 1200px;
+// $mdandlg: 1200px;
+
+@mixin button-transform($transform){
+	-moz-transform: skewX($transform);
+    -o-transform: skewX($transform);
+    -ms-transform: skewX($transform);
+	-webkit-transform: skewX($transform);
+    transform: skewX($transform);
+}
+@mixin transition-animation($transition){
+	transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+}
+@mixin media-respond($media) {
+  @if $media == xs {
+    @media only screen and (max-width: $xs) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (max-width: $sm) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (max-width: $md) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (max-width: $lg) { @content; }
+  }
+  @else if $media == minsm {
+    @media only screen and (min-width: $sm) { @content; }
+  }
+  @else if $media == minmd {
+    @media only screen and (min-width: $mdmin) { @content; }
+  }
+  @else if $media == minlg {
+    @media only screen and (min-width: $lg) { @content; }
+  }
+  @else if $media == mdandlg {
+    @media (min-width: $md) and (max-width: $lg) { @content; }
+  }
+}

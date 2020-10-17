@@ -1,0 +1,23 @@
+@import 'vars';
+@import 'mediaMixins';
+:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+  outline: -moz-focus-ring-color auto 0px;
+}
+* {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  -o-scroll-behavior: smooth;
+}
+body {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+p {
+  margin-bottom: 0;
+}
